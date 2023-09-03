@@ -1,0 +1,64 @@
+*{
+    padding: 0;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #FEFCFB;
+}
+.margin{
+margin:20px 20px;
+}
+
+.container1 h3{
+ width: fit-content;
+ margin: auto;
+}
+
+
+.container1 p{
+    font-size: 1rem;
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.form-control:focus{
+    outline: none;
+    border: none;
+}
+
+.btn{
+   background-color: rebeccapurple;
+   color: white; 
+   font-weight: 800;
+}
+
+.btn:hover{
+    background-color: white;
+    color: rebeccapurple;
+}
+.card{
+    border-radius: 20px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.proContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+
+
+
+
+
+
+
+
+
+
