@@ -19,6 +19,7 @@ async function getMealList(e) {
       `https://www.themealdb.com/api/json/v1/1/search.php?s=${SearchTxt} `
     );
     const data = await responser.json();
+    console.log(data);
     let html = "";
     if (data.meals) {
       data.meals.forEach((element) => {
@@ -89,7 +90,7 @@ async function getModalData(e) {
     const tabelQuantity = [];
     for (let i = 1; i <= 20; i++) {
       const Quantity = meal[`strMeasure${i}`];
-      if (Quantity !== "") {
+      if (Quantity !== "" && Quantity !== ` `) {
         tabelQuantity.push(`${Quantity}`);
       }
     }
@@ -97,7 +98,7 @@ async function getModalData(e) {
     console.log(tabelItem);
     console.log(tabelQuantity);
 
-    tabelBodyHtml = ""
+    tabelBodyHtml = "";
 
     if (tabelItem.length === tabelQuantity.length) {
       for (let i = 0; i < tabelItem.length; i++) {
@@ -141,8 +142,8 @@ ${tabelBodyHtml}
 
 </br>
         <p>
-        ${meal.strInstructions}
 
+${meal.strInstructions}
         </p>
   
       </div>
