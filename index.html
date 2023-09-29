@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="./style.css" />
 </head>
 
@@ -33,11 +34,12 @@
   <!--  CARD  -->
   <div class="itemContainer">
 
-    <div class="d-flex proContainer" id="meal">
+    <div  data-aos="fade-right" class="d-flex proContainer" id="meal">
 
-      <div class="fake">
-      </div>
-      <!-- <div  class="card" id="meal" style="min-width: 18rem; ">
+      <!-- <div class="fake">
+      </div> -->
+
+      <div data-aos="zoom-in"  class="card" id="meal" style="min-width: 18rem; ">
           <img src="./accountManager.png" class="card-img-top" alt="..." />
   
     
@@ -54,8 +56,9 @@
           >
             Check Recipe
           </button>
-        </div>  -->
+        </div> 
     </div>
+
 
   </div>
 
@@ -101,6 +104,10 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
     integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
     crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   <script src="./script.js"></script>
 </body>
 

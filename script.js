@@ -22,9 +22,9 @@ async function getMealList(e) {
     console.log(data);
     let html = "";
     if (data.meals) {
-      data.meals.forEach((element) => {
+      data.meals.map((element) => {
         html += `
-            <div  class="card "  style="width: 18rem" data-id=${element.idMeal}>
+            <div data-aos="zoom-in-up"  class="card "  style="width: 18rem" data-id=${element.idMeal}>
             <div class="image">
               <img src="${element.strMealThumb}" class="card-img-top" alt="" />
       
@@ -51,6 +51,14 @@ async function getMealList(e) {
           </div>
         `;
       });
+      AOS.init();
+      document.addEventListener('DOMContentLoaded', function() {
+        AOS.refresh();
+      });
+      setInterval(function() {
+        AOS.refresh();
+      }, 100);
+      
       meallist.innerHTML = html;
     }
   } catch (err) {
